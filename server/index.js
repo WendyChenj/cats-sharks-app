@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import { sharksList, catsList } from '../src/images';
+import { sharksList, catsList } from './images';
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -12,7 +12,8 @@ const HTML_FILE = path.join(__dirname, '../index.html');
 
 app.get('/', (req, res) => {
   // res.send(shuffle([...catsList, ...sharksList]));
-  res.sendFile(HTML_FILE);
+  // res.sendFile(HTML_FILE);
+  res.send("Hello World!")
 });
 
 app.get('/cats', (req, res) => {
