@@ -37,3 +37,5 @@ This application is built on Node, Express & React. It enables users to check th
 ### Demo
 
 Check it out here: https://www.loom.com/share/416cb1eb9dcc435191a5e6f9b337bc3b
+
+@ Happy Coding - Wendy
