@@ -1,4 +1,6 @@
-export const sharksList = [
+const { shuffle } = require('./utility');
+
+const sharksList = [
   'https://founded.media/hiring/photos/sharks/11261840124_dc9ac72bbe_b.jpg',
   'https://founded.media/hiring/photos/sharks/513197047_2f861d56cb_b.jpg',
   'https://founded.media/hiring/photos/sharks/2989909952_b59500107e_o.jpg',
@@ -11,7 +13,7 @@ export const sharksList = [
   'https://founded.media/hiring/photos/sharks/4936728723_91da549b05_b.jpg',
 ];
 
-export const catsList = [
+const catsList = [
   'https://founded.media/hiring/photos/cats/14157413946_fea785b4d6_k.jpg',
   'https://founded.media/hiring/photos/cats/16175483119_bd7374d8a8_h.jpg',
   'https://founded.media/hiring/photos/cats/13901304865_a444cf4d34_k.jpg',
@@ -23,3 +25,9 @@ export const catsList = [
   'https://founded.media/hiring/photos/cats/11477923503_bbdf86387d_b.jpg',
   'https://founded.media/hiring/photos/cats/4481336172_7f464f180d_b.jpg'
 ];
+
+const imagesList = shuffle([...catsList, ...sharksList]);
+
+module.exports = {
+  catsList, sharksList, imagesList
+}

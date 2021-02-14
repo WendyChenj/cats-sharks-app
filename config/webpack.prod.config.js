@@ -5,13 +5,11 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, '../server/index.js'),
+  entry: path.resolve(__dirname, '../src'),
   output: {
-    path: path.join(__dirname, '../dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js'
   },
-  target: 'node',
-  devtool: 'source-map',
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
@@ -26,7 +24,7 @@ module.exports = {
     rules: [
       {
         // Transpiles ES6-8 into ES5
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -58,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "src/index.html",
+      template: "./src/index.html",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
