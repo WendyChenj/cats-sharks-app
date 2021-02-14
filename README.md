@@ -6,6 +6,7 @@ This application is built on Node, Express & React. It enables users to check th
 
 Please clone this repository, run 'npm install' to install the necessary packages using in the project. <br />
 Run 'npm run build' to start the server. <br />
+You could also run 'npm start' followed by running 'npm run build'.
 
 ### Key Technologies
 

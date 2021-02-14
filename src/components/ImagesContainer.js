@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { ImagesStateContext } from './Homepage';
+import { ImagesStateContext } from '../page/Homepage';
 import ImageContainer from './ImageContainer';
 
 import './imagesContainer.css';
