@@ -48,7 +48,7 @@ const Homepage = () => {
       .catch(error => {
         console.log(error);
         setImagesState({
-          ...images,
+          ...imagesState,
           isFetching: false
         })
       });
