@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.no-image-title-container {
+.dialog-container {
   width: 80%;
   height: 20%;
   margin-top: 10%;
@@ -12,8 +12,8 @@
   color: #fff;
 }
 
-.no-image-title-1-container, 
-.no-image-title-3-container {
+.dialog-1, 
+.dialog-3 {
   min-width: 20%;
   max-width: 60%;
   background-color: #e76f51;
@@ -25,7 +25,7 @@
   margin-bottom: 1.5rem;
 }
 
-.no-image-title-2-container {
+.dialog-2 {
   min-width: 20%;
   max-width: 60%;
   background-color: #2a9d8f;
@@ -37,19 +37,19 @@
   margin-bottom: 1.5rem;
 }
 
-.no-image-title-1-container {
+.dialog-1 {
   animation: 2s ease fade-in;
 }
 
-.no-image-title-2-container {
+.dialog-2 {
   animation: 4s ease fade-in;
 }
 
-.no-image-title-3-container {
+.dialog-3{
   animation: 6s ease fade-in;
 }
 
-.no-image-title-1 {
+.dialog-1 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.25rem;

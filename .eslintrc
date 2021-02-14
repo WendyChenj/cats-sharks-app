@@ -19,7 +19,6 @@
   "rules": {
     "no-unused-vars": "warn",
     "max-len": [1, 120, 2, { "ignoreComments": true }],
-    "react/prop-types": "warn",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",

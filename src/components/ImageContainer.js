@@ -1,21 +1,22 @@
 import React from 'react';
 import Loader from './Loader';
+import PropTypes from 'prop-types';
 
 import './imageContainer.css';
 
 const ImageContainer = ({imageUrl, loading}) => {
 
   let imageContainerComponent = (
-    <div className='no-image-title-container'>
-      <div className='no-image-title-1-container'>
+    <div className='dialog-container' role="no-image">
+      <div className='dialog-1'>
         <p>Wanna see some cute kitties or sharks?</p>
       </div>
 
-      <div className='no-image-title-2-container'>
+      <div className='dialog-2'>
         <p>Sure!</p>
       </div>
 
-      <div className='no-image-title-3-container'>
+      <div className='dialog-3'>
         <p>Choose your faviourite animal and click the button above!</p>
       </div>
     </div>
@@ -36,10 +37,15 @@ const ImageContainer = ({imageUrl, loading}) => {
   }
 
   return (
-    <div className='image-container'>
+    <div className='image-container' role='image-container'>
       {imageContainerComponent}
     </div>
   );
+}
+
+ImageContainer.propTypes = {
+  imageUrl: PropTypes.string,
+  loading: PropTypes.bool
 }
 
 export default ImageContainer;

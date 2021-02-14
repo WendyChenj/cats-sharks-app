@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ImagesContainer from './ImagesContainer';
-import ToggleButton from './ToggleButton';
+import ImagesContainer from '../components/ImagesContainer';
+import ToggleButton from '../components/ToggleButton';
 
 import './homepage.css';
 
@@ -51,7 +51,8 @@ const Homepage = () => {
           ...imagesState,
           isFetching: false
         })
-      });
+      }
+    );
   }
 
   const initImagesState = () => {
