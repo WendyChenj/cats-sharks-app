@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
+import ImagesContainer from './ImagesContainer';
+import ToggleButton from './ToggleButton';
 
-const ImagesStateContext = React.createContext({});
+import './homepage.css';
+
+export const ImagesStateContext = React.createContext({
+  images: null,
+  isFetching: false
+});
 
 const Homepage = () => {
   const [catsDisplay, setCatsDisplay] = useState(false);
@@ -55,13 +62,14 @@ const Homepage = () => {
   }
 
   return (
-    <div>
+    <div className='homepage'>
+      
       <div className='buttonsGroup'>
-        <button onClick={handleCatsDisplay}>Cats</button>
-        <button onClick={handleSharksDisplay}>Sharks</button>
+        <ToggleButton handleClick={handleCatsDisplay} buttonTitle='Cats' buttonActive={catsDisplay} />
+        <ToggleButton handleClick={handleSharksDisplay} buttonTitle='Sharks' buttonActive={sharksDisplay} />
       </div>
 
-      <div className='images-container'>
+      <div className='homepage-images-container'>
         <ImagesStateContext.Provider value={imagesState}>
           <ImagesContainer />
         </ImagesStateContext.Provider>
