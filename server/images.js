@@ -1,5 +1,3 @@
-const { shuffle } = require('./utility');
-
 const sharksList = [
   'https://founded.media/hiring/photos/sharks/11261840124_dc9ac72bbe_b.jpg',
   'https://founded.media/hiring/photos/sharks/513197047_2f861d56cb_b.jpg',
@@ -26,8 +24,4 @@ const catsList = [
   'https://founded.media/hiring/photos/cats/4481336172_7f464f180d_b.jpg'
 ];
 
-const imagesList = shuffle([...catsList, ...sharksList]);
-
-module.exports = {
-  catsList, sharksList, imagesList
-}
+module.exports = { catsList, sharksList }
