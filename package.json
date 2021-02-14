@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buildDev": "rm -rf dist && webpack --mode development --config config/webpack.base.config.js && webpack --mode development --config config/webpack.dev.config.js",
-    "buildProd": "rm -rf dist && webpack --mode development --config config/webpack.base.config.js && webpack --mode development --config config/webpack.prod.config.js",
-    "build": "rm -rf dist && webpack --mode development",
-    "start": "node server/index.js",
+    "prebuild": "webpack --mode production --config config/webpack.prod.config.js --progress",
+    "build": "node server",
+    "start": "webpack serve --mode development --config config/webpack.dev.config.js --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Wendy Chen",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -36,6 +36,7 @@
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-middleware": "^4.1.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
