@@ -4,31 +4,32 @@ const nodeExternals = require("webpack-node-externals");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, '../server/index.js'),
+  entry: path.resolve(__dirname, '../src/index.js'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
-  target: 'node',
-  node: {
-    __dirname: false,
-    __filename: false
-  },
-  externals: [nodeExternals()],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /\.html$/,
+        use: [{ loader: "html-loader" }]
+      },
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "src/index.html",
+      template: "./src/index.html",
       filename: "./index.html",
       excludeChunks: ['server']
     })
