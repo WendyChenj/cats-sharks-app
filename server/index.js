@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { sharksList, catsList, imagesList } = require('../server/images');
+const { sharksList, catsList } = require('./images');
+const { shuffle } = require('./utility');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -34,7 +35,7 @@ app.get('/api/:animalType', (req, res) => {
 
   switch(req.params.animalType) {
     case 'images':
-      res.send(imagesList);
+      res.send(shuffle([...sharksList, ...catsList]));
       break;
     case 'sharks':
       res.send(sharksList);

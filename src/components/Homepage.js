@@ -34,7 +34,7 @@ const Homepage = () => {
   const fetchImages = () => {
     const urlParam = catsDisplay && sharksDisplay? 'images': (catsDisplay? 'cats': 'sharks');
     setImagesState({
-      ...imagesState,
+      images: null,
       isFetching: true
     })
     fetch(`http://localhost:3000/api/${urlParam}`)
