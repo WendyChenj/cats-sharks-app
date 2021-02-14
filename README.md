@@ -4,9 +4,9 @@ This application is built on Node, Express & React. It enables users to check th
 
 ### Instructions
 
-Please clone this repository, run 'npm install' to install the necessary packages using in the project. <br />
-Run 'npm run build' to start the server. <br />
-You could also run 'npm start' followed by running 'npm run build'.
+- Please clone this repository, run `npm install` to install the necessary packages using in the project.
+- Please run `npm run build` first to start the server localhost:3000
+- Then run `npm start` and localhost:8080 will open automatically for development.
 
 ### Key Technologies
 
@@ -23,12 +23,17 @@ You could also run 'npm start' followed by running 'npm run build'.
 - Express.js
 - React.js
 
+
+##### Test Framework
+
+- Jest
+
 ##### Configuration 
 
 - Webpack
 - Babel
 - Eslint
-
+    
 ### Demo
 
 Check it out here: https://www.loom.com/share/416cb1eb9dcc435191a5e6f9b337bc3b
